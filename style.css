@@ -1,0 +1,6 @@
+/* ===== Orange Box Styling ===== */
+.orange-box {
+    background-color: #ff8c00; /* orange */
+    color: #000000;           /* black text for contrast */
+    border-bottom: 4px solid #cc7000;
+}

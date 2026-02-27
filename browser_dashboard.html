@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Environment Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+        }
+
+        /* ===== Common Box Styling ===== */
+        .box {
+            background-color: #2c2c2c;
+            color: #ffffff;
+            padding: 20px;
+            margin: 15px;
+            border-bottom: 4px solid #444;
+        }
+
+        .box h1 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .profile-info p {
+            margin: 6px 0;
+            font-size: 14px;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+
+        /* ===== Activity Links Styling ===== */
+        .activity-links a {
+            color: #00d9ff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .activity-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== Buttons Styling ===== */
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= STUDENT PROFILE BOX ================= -->
+    <div class="box">
+        <h1>Student Profile</h1>
+
+        <div class="profile-info">
+            <p><span class="label">NAME:</span> Justin Carl R. Rivero</p>
+            <p><span class="label">SEX:</span> Male</p>
+            <p><span class="label">ADDRESS:</span> Zone 5 Saripongpong Lagonoy Cam Sur</p>
+            <p><span class="label">COURSE/YR/SEC:</span> BSIT 2nd Year Section D</p>
+            <p><span class="label">Name of School:</span> PARTIDO STATE UNIVERSITY GOA </p>
+            <p><span class="label">ACADEMIC YEAR:</span> 2nd Semester (2025–2026)</p>
+            <p><span class="label">COURSE CODE:</span> [PF2] Event-Driven Programming</p>
+            <p><span class="label">INSTRUCTOR:</span> Arjay Abio</p>
+        </div>
+    </div>
+
+    <!-- ================= ACTIVITY LINKS BOX ================= -->
+    <div class="box activity-links orange-box">
+        <h1>Activity Links</h1>
+        <ul>
+            <li>
+                <a href="https://jcburger1031.github.io/Word-Guessing-Game/" target="_blank">
+                    Word Guessing Game
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ================= PART C: NAVIGATION CONTROLS ================= -->
+    <div class="box">
+        <h1>Navigation Controls</h1>
+
+        <button onclick="reloadPage()">Reload Current Page</button>
+        <button onclick="redirectPage()">Click Me</button>
+        <button onclick="goBack()">Back</button>
+        <button onclick="goForward()">Forward</button>
+    </div>
+
+    <script>
+        // ================= PART C: NAVIGATION FUNCTIONS =================
+        function reloadPage() {
+            location.reload();
+        }
+
+        function redirectPage() {
+            location.href = "https://youtu.be/xvFZjo5PgG0";
+        }
+
+        function goBack() {
+            history.back();
+        }
+
+       function goForward() {
+    window.location.href = "index.html";
+   }
+
+    </script>
+
+</body>
+</html>

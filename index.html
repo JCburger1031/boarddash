@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3c3a3a;
+            margin-bottom: 20px;
+            padding: 25px;
+            border-radius: 8px;
+            border: 4px solid #3c3a3a;
+            box-shadow: inset 0 0 10px #000000;
+        }
+
+        header {
+            background-color: #262a2c;
+            color: white;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Student Profile</h1>
+    <p><strong>Complete Name:</strong> Justin Carl R. Rivero </p>
+    <p><strong>Sex:</strong> Male </p>
+    <p><strong>Address:</strong> Zone 5 Saripongpong Lagonoy CAM SUR </p>
+    <p><strong>Course, Year & Section:</strong> BSIT 2D</p>
+    <p><strong>Name of School:</strong> PARTIDO STATE UNIVERSITY GOA </p>
+    <p><strong>Semester & Academic Year:</strong> 2nd Semester, AY 2025–2026 </p>
+    <p><strong>Course Code & Title:</strong>  PF2: Event Driven Programming </p>
+    <p><strong>Subject Instructor:</strong> Arjay Abio </p>
+</header>
+
+    <div class="box activity-links orange-box">
+        <h1>ACTIVITY LINKS BOX</h1>
+        <ul>
+            <li>
+                <a href="https://jcburger1031.github.io/Word-Guessing-Game/" target="_blank">
+                    Word Guessing Game
+                </a>
+            </li>
+        </ul>
+    </div>
+<style>
+    .orange-box {
+        background-color: #ff5722;
+        color: #ffffff;
+        border-color: #e64a19;
+    }
+</style>
+
+    <div class="box orange-box">
+        <h1>Browser Information</h1>
+
+        <p><span class="label">Browser Name & Version:</span> <span id="browser"></span></p>
+        <p><span class="label">Platform (OS):</span> <span id="platform"></span></p>
+        <p><span class="label">Java Enabled:</span> <span id="java"></span></p>
+        <p><span class="label">Screen Resolution:</span> <span id="resolution"></span></p>
+        <p><span class="label">Available Screen Size:</span> <span id="available"></span></p>
+        <p><span class="label">Color Depth:</span> <span id="colorDepth"></span></p>
+    </div>
+
+    <style>
+        /* ===== Labels Styling ===== */
+        .label {
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+            /* ===== Box Styling ===== */
+        .box {
+            background-color: #2c2c2c;  
+            color: #ffffff;
+            padding: 20px;
+            margin: 15px;
+            border-bottom: 4px solid #444;
+        }
+
+            /* ===== Orange Box Styling ===== */
+        .orange-box {
+            background-color: #ff5722;
+            color: #ffffff;
+            border-color: #e64a19;
+        }
+
+         /* ===== Header Styling ===== */   
+        header {
+            background-color: #262a2c;
+            color: white;
+            padding: 25px;
+        }
+        header h1 {
+            margin-top: 0;
+        }
+
+            /* ===== Activity Links Styling ===== */
+        .activity-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .activity-links li {
+            margin: 10px 0;
+        }   
+        .activity-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .activity-links a:hover {
+            text-decoration: underline;
+        }
+
+            /* ===== Buttons Styling ===== */
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }        
+    </style>
+
+    <div class="box">
+        <h1>Navigation Controls</h1>
+
+        <button onclick="reloadPage()">Reload Current Page</button>
+        <button onclick="redirectPage()">Click Me</button>
+        <button onclick="goBack()">Back</button>
+        <button onclick="goForward()">Forward</button>
+    </div>
+
+    <script>
+        // Display Browser Information
+        document.getElementById('browser').textContent = navigator.userAgent;
+        document.getElementById('platform').textContent = navigator.platform;
+        document.getElementById('java').textContent = navigator.javaEnabled() ? "Yes" : "No";
+        document.getElementById('resolution').textContent = `${screen.width} x ${screen.height}`;
+        document.getElementById('available').textContent = `${screen.availWidth} x ${screen.availHeight}`;
+        document.getElementById('colorDepth').textContent = `${screen.colorDepth} bits`;
+        // Navigation Functions
+        function reloadPage() {
+            location.reload();  
+            }
+        function redirectPage() {
+            location.href = "https://youtu.be/xvFZjo5PgG0";
+            }
+        function goBack() {
+            history.back();
+            }
+        function goForward() {
+            history.forward();
+            }
+            </script>
+
+            <script>
+    // ================= Dynamic Styling with Screen Info =================
+    function updateBackgroundColor() {
+        const screenWidth = window.innerWidth;
+
+        if (screenWidth < 600) {
+            document.body.style.backgroundColor = "#2196f3"; // Blue (Mobile)
+        } else if (screenWidth >= 600 && screenWidth <= 991) {
+            document.body.style.backgroundColor = "#4caf50"; // Green (Tablet)
+        } else {
+            document.body.style.backgroundColor = "#ff9800"; // Orange (Desktop)
+        }
+    }
+
+    // Apply on page load
+    window.addEventListener("load", updateBackgroundColor);
+
+    // Apply on window resize
+    window.addEventListener("resize", updateBackgroundColor);
+</script>
+
+
+</body>
+</html>
